@@ -135,9 +135,9 @@ div:nth-child(1) .mobile {
     min-width: 240px;
     width: 22vw;
     max-width: 280px;
-    height: 70vh;
+    /* height: 70vh; */
     min-height: 400px;
-    max-height: 580px;
+    max-height: 570px;
     background-color: var(--Light-Grayish-Violet);
     border-radius: 20px;
     box-shadow: 0 0 13px 2px #000000b3;
