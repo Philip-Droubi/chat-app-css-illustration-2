@@ -34,7 +34,7 @@ function sendMessage() {
     if (message.value != '') {
         let lastSide = document.querySelectorAll('.message');
         lastSide[lastSide.length - 1].lastElementChild.className === 'me' ? side = 'other' : side = 'me'
-        side === 'other' ? chat.style.paddingBottom = '80px' : chat.style.paddingBottom = '50px'
+        side === 'other' ? chat.style.paddingBottom = '85px' : chat.style.paddingBottom = '50px'
         let mes = document.createElement('div');
         mes.className = 'message'
         mes.innerHTML = '<p class=' + side + '>' + message.value + '</p >'
