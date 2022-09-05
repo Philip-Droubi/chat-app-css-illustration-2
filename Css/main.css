@@ -132,7 +132,7 @@ body>.container>div:nth-child(1) {
 }
 
 div:nth-child(1) .mobile {
-    min-width: 240px;
+    min-width: 260px;
     width: 22vw;
     max-width: 280px;
     /* height: 70vh; */
