@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Orbitron:wght@400;500;600;700;800;900&family=Outfit:wght@400;700&family=Raleway:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+    --font-size: 16px;
+    --body-background-color: #fafafa;
+    --message-color: hsl(270, 7%, 64%);
+    --message-box: hsl(270, 29%, 92%);
+    --margin: 80px;
+}
+
+/* Start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* XLarge */
+@media (min-width: 1400px) {
+    .container {
+        width: 1350px;
+    }
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: var(--font-size);
+    background-color: var(--body-background-color);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+/* body::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -10%;
+    width: 30%;
+    height: 70%;
+    background: linear-gradient(45deg, var(--White), 20%, var(--Light-Grayish-Violet));
+    border-top-left-radius: 270px;
+    border-top-right-radius: 270px;
+    z-index: -1;
+} */
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 35%;
+    min-width: 250px;
+    height: 85%;
+    background: linear-gradient(45deg, var(--Light-Violet), var(--Light-Magenta));
+    border-bottom-left-radius: 270px;
+    border-bottom-right-radius: 270px;
+    z-index: -1;
+}
+
+body>.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body>.container>div:nth-child(1) {
+    flex-basis: 48%;
+    display: flex;
+    justify-content: center;
+}
+
+div:nth-child(1) .mobile {
+    min-width: 240px;
+    width: 22vw;
+    max-width: 301px;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 580px;
+    background-color: var(--Light-Grayish-Violet);
+    border-radius: 20px;
+    box-shadow: 0 0 13px 2px #000000b3;
+    border: 5px solid rgb(34, 34, 34);
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+div:nth-child(1) .mobile::-webkit-scrollbar {
+    display: none;
+}
+
+div:nth-child(1) .mobile .upBar {
+    background: linear-gradient(90deg, var(--Light-Violet), var(--Light-Magenta));
+    height: 75px;
+    width: 100%;
+    border-radius: 3px;
+    position: relative;
+    padding: 0 6.52%;
+}
+
+div:nth-child(1) .mobile .upBar .notch {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 19%;
+    position: absolute;
+    background-color: #eee;
+    top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.notch .cam {
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #353535;
+    background-color: black;
+    left: 9%;
+    top: 1px;
+    position: absolute;
+}
+
+.notch .speaker {
+    width: 46px;
+    height: 5px;
+    background-color: #222;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3.4px;
+    position: absolute;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.notch .sensor {
+    width: 10px;
+    height: 5px;
+    background-color: #222;
+    right: 15%;
+    top: 3.4px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.upBar .menu {
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6.52%;
+    float: right;
+    width: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu span {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 50%;
+    transition: 0.2s;
+    display: block;
+}
+
+.upBar .menu:hover span {
+    background-color: var(--Light-Violet);
+}
+
+.upBar button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s;
+}
+
+.upBar button i {
+    color: var(--Light-Grayish-Violet);
+    font-size: 20px;
+}
+
+.upBar button:hover i {
+    color: var(--Light-Magenta);
+}
+
+.upBar .user {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    align-items: center;
+    /* min-width: 280px; */
+    margin-left: 20px;
+}
+
+.upBar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid var(--Light-Grayish-Violet);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.upBar img:hover {
+    border-color: var(--Very-Light-Magenta);
+}
+
+.upBar .user .name {
+    display: inline-block;
+    font-size: 14px;
+    background: -webkit-linear-gradient(0deg, var(--Light-Grayish-Violet), var(--Light-Grayish-Violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 10px;
+    min-width: 108px;
+    transition: 0.2s;
+}
+
+.upBar .user .name:hover {
+    background: -webkit-linear-gradient(0deg, var(--Very-Light-Magenta), var(--Light-Grayish-Violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.upBar .user .name span {
+    display: block;
+    font-weight: 500;
+}
+
+.mobile .messageBox {
+    position: sticky;
+    bottom: 0;
+    padding: 8px 10px;
+    background-color: hsla(295, 53%, 61%, 0.37);
+    border-top-right-radius: 11px;
+    width: calc(100% - 4px);
+    backdrop-filter: blur(2.5px);
+}
+
+.mobile .messageBox input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 45px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: var(--Very-Dark-Desaturated-Violet);
+    background-color: var(--Light-Grayish-Violet);
+}
+
+.mobile .messageBox i {
+    color: var(--Light-Grayish-Violet);
+    position: absolute;
+    padding: 7px 12px;
+    border-radius: 50%;
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mobile .messageBox i:hover {
+    background-color: var(--Light-Violet);
+}
+
+.mobile .chat {
+    height: 85%;
+    position: relative;
+    overflow-y: scroll;
+    padding: 10px 10px 55px;
+    scroll-behavior: smooth;
+}
+
+.mobile .chat::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--Very-Light-Magenta);
+}
+
+.mobile .chat::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--Moderate-Violet), var(--Light-Magenta));
+    border-radius: 12px;
+}
+
+.mobile .chat::-webkit-scrollbar-track {
+    background-color: hsl(292, 46%, 84%);
+}
+
+.chat .message {
+    width: 99%;
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+.chat .message .me {
+    background-color: var(--message-box);
+    margin-bottom: 10px;
+    font-size: 11px;
+    max-width: 65%;
+    width: fit-content;
+    border-radius: 10px;
+    border-bottom-left-radius: 3px;
+    padding: 5px;
+    line-height: initial !important;
+    color: var(--Moderate-Violet);
+}
+
+.chat .message .other {
+    background-color: white;
+    margin-bottom: 10px;
+    font-size: 10px;
+    width: fit-content;
+    max-width: 65%;
+    border-radius: 10px;
+    border-bottom-right-radius: 3px;
+    padding: 5px;
+    padding-left: 9px;
+    color: var(--Desaturated-Dark-Violet);
+    float: right;
+    line-height: initial !important;
+    box-shadow: 1px 1px 2px 0 #00000030;
+}
+
+.chat .list {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.chat .list li {
+    list-style: none;
+    display: inline;
+}
+
+.chat .list li img {
+    border-radius: 5px;
+    width: 19%;
+    display: inline;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.chat label {
+    cursor: pointer;
+    position: relative;
+    margin-left: 30px;
+}
+
+.chat input {
+    opacity: 0;
+    display: none;
+}
+
+label::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--Grayish-Blue);
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    transition: 0.1s;
+}
+
+.chat .price {
+    clear: both;
+    margin-bottom: 10px;
+    width: 75%;
+    border-radius: 10px;
+    border-bottom-left-radius: 5px;
+    background: linear-gradient(90deg, var(--Light-Magenta), var(--Light-Violet));
+    padding: 10px 0;
+    font-size: 13px;
+    margin-bottom: 8px;
+    word-spacing: 0px;
+    position: relative;
+    cursor: pointer;
+}
+
+.chat .price:hover label::after {
+    background-color: hsla(206, 7%, 79%, 0.418);
+}
+
+.chat .price input:checked+label::after {
+    background-color: hsla(206, 7%, 79%, 0.418);
+}
+
+.chat .price p {
+    color: gainsboro !important;
+    display: inline-block;
+    font-size: 10px !important;
+    width: 100%;
+    line-height: 0 !important;
+}
+
+.chat .price .num {
+    color: white;
+    float: right;
+    font-weight: 700;
+    font-size: 14px !important;
+    margin-right: 10px;
+}
+
+/* second main child */
+
+body>.container div:nth-child(2) {
+    flex-basis: 48%;
+}
+
+h1 {
+    color: var(--Very-Dark-Desaturated-Violet);
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+body>.container div:nth-child(2) p {
+    font-size: 18px;
+    max-width: 80%;
+    line-height: 1.5;
+    color: var(--Dark-Grayish-Violet);
+}
+
+/* attribution */
+
+.attribution {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--Light-Magenta);
+    margin-top: 25px;
+    margin-bottom: -20px;
+    flex-basis: 100%;
+    margin: 50px 0;
+}
+
+.attribution a {
+    color: var(--Moderate-Violet);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.attribution a:hover {
+    color: var(--Very-Dark-Desaturated-Violet);
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    body>.container {
+        flex-direction: column;
+    }
+
+    body>.container .right {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .right h1 {
+        font-size: 2.5rem;
+    }
+
+    body>.container .right p {
+        margin: auto;
+    }
+
+    body::after {
+        max-height: 500px;
+    }
+
+    .mobile {
+        max-height: 500px !important;
+    }
+}
